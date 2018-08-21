@@ -14,7 +14,7 @@ description: 깃허브 블로그를 시작합니다.
 create account {
    create coupon
 }
-{% highlight %}
+{% endhighlight %}
 
 계정이 생성되면 내부적으로 다시 쿠폰을 생성합니다.  콜스텍을 보면 다음과 같습니다.
 1. create account via API gateway
