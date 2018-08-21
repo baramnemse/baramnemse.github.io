@@ -9,11 +9,13 @@ description: 깃허브 블로그를 시작합니다.
 
 # 예제로 보는 API 콜 방식의 문제
 우리는 왜 API 콜 방식이 우리에게 고통을 주는지 가입자에게 쿠폰을 발송하는 간단한 서비스 예제를 통해서 살펴봅니다.
+
 {% highlight ruby %}
 create account {
    create coupon
 }
 {% highlight %}
+
 계정이 생성되면 내부적으로 다시 쿠폰을 생성합니다.  콜스텍을 보면 다음과 같습니다.
 1. create account via API gateway
 2. create counpon via API gateway
