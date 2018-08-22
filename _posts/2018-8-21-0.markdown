@@ -10,9 +10,9 @@ description: 코드기반으로 블로그를 운영해봅시다
 # Github Page 방식
 깃허브 페이지는 Jekyll를 통해 github에 있는 코드를 웹페이지로 서비스합니다. 마크다운 방식으로 코드를 작성하면 jeykyll이 자바 스크립트, css, html을 생성해줍니다.
 
-![마크다운]({{ "/_post/0/이미지 2.png" | absolute_url }})
+![마크다운]({{ "/blob/master/_post/0/이미지 2.png" | absolute_url }})
 
-![생성된 웹 결과물]({{ "/_post/0/이미지 3.png" | absolute_url }})
+![생성된 웹 결과물]({{ "/blob/master/_post/0/이미지 3.png" | absolute_url }})
 
 깃허브 페이지를 이용해서 웹페에지를 서비스하려면 다음과 같은 선택지가 있습니다.
 1. Github Page만 이용하기
