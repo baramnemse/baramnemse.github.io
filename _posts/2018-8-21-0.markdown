@@ -8,6 +8,11 @@ description: 코드기반으로 블로그를 운영해봅시다
 <p class="intro"><span class="dropcap">B</span>log는 일반적으로 블로그 제공 서비스나, 자체 호스팅을 통해 운영했습니다. 이런 방식은 백업, 공동작업, 결과물의 재이용 측면에서는 어렵습니다. 이런 어려운점을 해결하고 소스코드 저장소인 Github를 통해 블러그를 운영할 수 있습니다.</p>
 
 # Github Page 방식
+깃허브 페이지는 Jekyll를 통해 github에 있는 코드를 웹페이지로 서비스합니다. 마크다운 방식으로 코드를 작성하면 jeykyll이 자바 스크립트, css, html을 생성해줍니다.
+
+![마크다운]({{ "/_post/0/이미지 2.png" | absolute_url }})
+
+![생성된 웹 결과물]({{ "/_post/0/이미지 3.png" | absolute_url }})
 
 # 이벤트 드리븐은 해결책인가
 
