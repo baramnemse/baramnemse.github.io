@@ -59,7 +59,8 @@ create account {
 
 # 참고자료
 Netflix Micoroservice
-{% youtube https://www.youtube.com/watch?v=CZ3wIuvmHeM %}
+<iframe src="https://www.youtube.com/watch?v=CZ3wIuvmHeM" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 Netflix Micoroservice(한글자막)
-{% youtube https://www.youtube.com/watch?v=OczG5FQIcXw %}
+<iframe src="https://www.youtube.com/watch?v=OczG5FQIcXw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
