@@ -27,10 +27,11 @@ Github page도 깃허브를 사용하므로 github.com의 계정과 저장소가
 
 다음은 맘에드는 테마를 포크합니다. 포크는 원본소스를 내 저장소로 가져오는것입니다. http://jekyllthemes.org/ 에 가서 원하는 테마를 찾습니다. 테마의 홈페이지(깃허브)로 간다음 자신의 저장소로 folk를 합니다. Remote Theme 방식사용시 포크가 필요없으나 기초가 되는 파일구조인식이나 최소한의 커스텀마이징을 위해서 포크하는것을 권합니다.
 
-![생성된 웹 결과물]({{ "/assets/post/0/이미지 4.png" | absolute_url }})
+![folk]({{ "/assets/post/0/이미지 4.png" | absolute_url }})
 원하는 테마를 내 저장소를 포크한다
 
-
+깃페이지에 가장 중요한 두가지 파일은 _post와 _config.yml 입니다. _post는 내가 쓸 블로그글이 저장되는 위치이고 _config.yml 설정 파일입니다.
 
 # 참고자료
 
+리모트테마로 깃허브 페이지 운영하기 https://dreamgonfly.github.io/2018/01/27/jekyll-remote-theme.html
