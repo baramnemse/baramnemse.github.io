@@ -17,6 +17,16 @@ create account {
 {% endhighlight %}
 
 계정이 생성되면 내부적으로 다시 쿠폰을 생성합니다.  콜스텍을 보면 다음과 같습니다.
-1. create account via API gateway
-2. create counpon via API gateway
+1. call create account
+2. create account via API gateway
+3. call create coupon
+4. create coupon via API gateway
+
+쿠폰 생성은 계정 생성에 의존적입니다. 따라서 이벤트 기간이 끝나면 account 서비스의 create 부분을 다음과 같이 수정해야합니다.
+
+{% highlight ruby %}
+create account {
+}
+{% endhighlight %}
+
 # 이벤트 드리븐은 해결책인가
