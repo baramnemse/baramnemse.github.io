@@ -58,9 +58,8 @@ create account {
 조건문으로 비지니스 로직이 더 복잡해지고, 불필요한 코드이기 때문에 언젠가는 저 조건문도 제거해야합니다.
 
 # 참고자료
-Netflix Micoroservice
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CZ3wIuvmHeM" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+Netflix Micoroservice
 
-Netflix Micoroservice(한글자막)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OczG5FQIcXw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
+Netflix Micoroservice(한글자막)
