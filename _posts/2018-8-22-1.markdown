@@ -46,4 +46,13 @@ create coupon {
 }
 {% endhighlight %}
 
-이벤트 컨슈밍 방식에서는 account 서비스는 변경이 필요없습니다. create coupon의 이벤트 컨슈밍 대상 중에 create account만 삭제하면됩니다. call 방식에서는 비니지스 로직을 수정하여 오류가 발생할 가능성이 높고 event 방식에서는 컨슈밍 대상만 제거하는 선언적인 부분만 수정하면됩니다.
+이벤트 컨슈밍 방식에서는 account 서비스는 변경이 필요없습니다. create coupon의 이벤트 컨슈밍 대상 중에 create account만 삭제하면됩니다. call 방식에서는 비니지스 로직을 수정하여 오류가 발생할 가능성이 높고 event 방식에서는 컨슈밍 대상만 제거하는 선언적인 부분만 수정하면됩니다. 이 때문에 call 방식에서는 조건문을 달아서 배포하기도 하지만 또다른 지옥의 시작입니다.
+
+{% highlight ruby %}
+create account {
+   if 이벤트 기간중인가
+      create coupon
+}
+{% endhighlight %}
+
+조건문으로 비지니스 로직이 더 복잡해지고, 불필요한 코드이기 때문에 언젠가는 저 조건문도 제거해야합니다.
