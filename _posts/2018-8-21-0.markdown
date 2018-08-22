@@ -30,7 +30,9 @@ Github page도 깃허브를 사용하므로 github.com의 계정과 저장소가
 ![folk]({{ "/assets/post/0/이미지 4.png" | absolute_url }})
 원하는 테마를 내 저장소를 포크한다
 
-깃페이지에 가장 중요한 두가지 파일은 _post와 _config.yml 입니다. _post는 내가 쓸 블로그글이 저장되는 위치이고 _config.yml 설정 파일입니다.
+깃페이지에 가장 중요한 두가지 파일은 _post와 _config.yml 입니다. _post는 내가 쓸 블로그글이 저장되는 위치이고 _config.yml는 설정 파일입니다.
+
+![중요한 파일]({{ "/assets/post/0/이미지 5.png" | absolute_url }})
 
 # 참고자료
 
