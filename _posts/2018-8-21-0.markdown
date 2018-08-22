@@ -33,9 +33,12 @@ Settings로가서 Repository name을 {name}.github.io로 바꿔주면 10분 정�
 
 ![settings]({{ "/assets/post/0/이미지 6.png" | absolute_url }})
 
-깃페이지에 가장 중요한 두가지 파일은 _post와 _config.yml 입니다. _post는 내가 쓸 블로그글이 저장되는 위치이고 _config.yml는 설정 파일입니다.
+깃페이지에 가장 중요한 두가지 파일은 _post와 _config.yml 입니다. _post는 내가 쓸 블로그글이 저장되는 위치이고 _config.yml는 설정 파일입니다. _config.yml는 열어보면 용도가 무엇인지 알수 있는 프로퍼티:밸류 구조로 작성됐습니다. 필요시 수정하면됩니다.
 
 ![중요한 파일]({{ "/assets/post/0/이미지 5.png" | absolute_url }})
+
+# 블로그 페이지 작성하기
+블로그 페이지는 _post안에 Y-M-D-{name}.md 의 파일명 형식과 마크다운 상단의 메타 포맷만 맞게 작성하면 jekyll 해당 마크다운을 빌드하여 웹페이지로 바꿔줍니다. 포크 방식으로 테마를 가져올경우 간결하지만 대부분의 사용법을 학습활 수 있는 예제가 들어 있으므로 도움이 됩니다.
 
 # 참고자료
 
