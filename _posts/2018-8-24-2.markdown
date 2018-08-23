@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "마이크로서비스 시대의 클래스 설계원칙"
+date:   2018-8-24
+description: 모듈 > 클래스 > 마이크로서비스로 바뀌는 패러다임에서 클래스 설계원칙이 마이크로서비스에는 어떻게 적용되는지 알아봅시다.
+---
+
+<p class="intro"><span class="dropcap">P</span>rinciple 는 소프트웨어 디자인에서 소프트웨어를 바라보는 뷰와 구현 방법을 제시하는 중요한 개념입니다.</p>
+
+# 단일책임의 원칙: Single Responsibility Principle
+
+# 인터페이스 분리의 원칙: Interface Segregation Principle
+
+# 개방폐쇄의 원칙: Open Close Principle
+
+# 의존성역전의 원칙: Dependency Inversion Principle
+
+# 리스코브 치환의 원칙: The Liskov Substitution Principle
+
+리모트테마로 깃허브 페이지 운영하기 https://dreamgonfly.github.io/2018/01/27/jekyll-remote-theme.html
