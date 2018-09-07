@@ -44,3 +44,4 @@ CPU의 사용률이 100% 보다 낮다는것은 일을 더 할 수 있다는것�
 # 참고자료
 
 리눅스 파일 오픈 설정, https://medium.com/hbsmith/too-many-open-files-%EC%97%90%EB%9F%AC-%EB%8C%80%EC%9D%91%EB%B2%95-9b388aea4d4e
+리눅스 디스크문제 해결, http://amazingguni.github.io/blog/2016/05/devops-chapter-4-disk
