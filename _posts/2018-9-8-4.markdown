@@ -35,5 +35,11 @@ Load Balancer - Non-BlockIO - Worker1 - Worker2
 
 Worker1은 RabbitMQ, Kafka등의 큐에 응모를 넣는일만 하고 요청자(웹 클라이언트)에 200 Ok 응답만 보내고 아무일도 안합니다. DB에 저장은 Worker2가 Worker1에 넣은 응모내용을 메세지큐에서 꺼내서 저장합니다. Worker1과 Worker2는 별도의 프로세스이고 비동기 관계입니다. Worker1에서 Worker2가 db에 저장하도록 워커2을 RPC등의 동기 방식으로 호출한다면 Block이됩니다.
 
+이전 포스트에서 설명한것과 같이 시스템의 처리 용량은 "앞에 있는 가장 낮은 구성 요소"가 결정하기 때문에 Non-blockIO를 통해 백만의 컨넥션을 처리하도록 만들어도 우리가 만든 코드가 Block하면 우리의 코드가 가장남은 구성 요소 = 병목이 됩니다. 따라서 Non-blockIO 쓰려면 다음을 반드시 사용해야합니다.
+
+1. Queue (RabbitMQ, Kafka ...)
+2. 워커 분리 (요청처리, DB 연산, 응답처리)
+3. 비동기
+
 # 참고자료
 Non-block IO <http://12bme.tistory.com/231>
