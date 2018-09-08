@@ -43,3 +43,5 @@ Worker1은 RabbitMQ, Kafka등의 큐에 응모를 넣는일만 하고 요청자(
 
 # 참고자료
 Non-block IO <http://12bme.tistory.com/231>
+
+Nginx <https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/>
