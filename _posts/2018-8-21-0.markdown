@@ -59,3 +59,5 @@ description: API 콜 방식을 버리고 왜 이벤트 컨슈밍 방식을 선�
 # 참고자료
 
 리모트테마로 깃허브 페이지 운영하기 https://dreamgonfly.github.io/2018/01/27/jekyll-remote-theme.html
+
+구글서치용 sitemap.xml 등록 <http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/>
