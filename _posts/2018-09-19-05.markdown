@@ -5,7 +5,7 @@ date:   2018-9-19
 description: 마이크로서비스에서는 데이터 저장영역이 독립적이기 때문에 Join을 쓸수가 없습니다. 이를 해결하기 위한 방법이 두 가지 있습니다.
 ---
 {% highlight ruby %}
-SELECT orders.date, orders.quantity, items.name from orders INNER JOIN items on orders.itemId = items.id
+SELECT orders.date, orders.quantity, items.name FROM orders INNER JOIN items on orders.itemId = items.id
 {% endhighlight %}
 
 # 데이터 저장의 독립성
