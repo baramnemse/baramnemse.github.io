@@ -22,8 +22,20 @@ Monolithic 아키텍처에서는 하나의 거대한 DB를 사용합니다. 서�
 
 # Join in Client Application
 주문-상품의 조인 데이터가 필요하면 주문 조회, 상품 조회후에 어플리케이션에서 조인하자
+
 ![Nginx]({{ "/assets/post/5/2.png" | absolute_url }})
+
+이 아이디어는 DB가 클러스터링을 아직 지원 안할때 부터 쓰던 오래된 방법입니다. 각각의 데이터를 조회한후에 데이터를 결합하고 이것을 리턴합니다. 이 방법은 데이터량에 따라서 쓸지 안쓸지 결정해야합니다.
+
+1. 작은 데이터 + 작은 데이터
+2. 큰 데이터 + 작은 데이터
+3. 큰 데이터 + 큰 데이터
 
 # Materialize The View
 주문, 상품의 변경을 리스닝하여 주문-상품뷰를 구성하고 이것을 조회하자
+
 ![Nginx]({{ "/assets/post/5/3.png" | absolute_url }})
+
+# 참고자료
+
+이미지 출처, Managing Data in Microservices <https://www.youtube.com/watch?v=E8-e-3fRHBw>
