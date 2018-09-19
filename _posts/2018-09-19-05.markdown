@@ -4,6 +4,7 @@ title:  "마이크로서비스 - 데이터 조인하기"
 date:   2018-9-19
 description: 마이크로서비스에서는 데이터 저장영역이 독립적이기 때문에 Join을 쓸수가 없습니다. 이를 해결하기 위한 방법이 두 가지 있습니다.
 ---
+<p class="intro"><span class="dropcap">J</span>oin은 서비스에서 반드시 필요한 연산입니다. 하지만 DB가 분리된 마이크로서비스에서는 쓸수가 없습니다. 맵리듀스와 같은 데이터 프로세싱 방법은 기본적으로 DB의 분리를 가정하여 만들어진 시스템이나 조회 서비스 용도에는 부적합합니다. 우리가 선택할 수 있는 방법에 대해 알아봅시다.</p>
 {% highlight sql %}
 SELECT orders.date, orders.quantity, items.name FROM orders INNER JOIN items ON orders.itemId = items.id
 {% endhighlight %}
