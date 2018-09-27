@@ -17,3 +17,5 @@ COMMIT
 
 # 참고자료
 <https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/>
+
+<https://www.youtube.com/watch?v=E8-e-3fRHBw>
