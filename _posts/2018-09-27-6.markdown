@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "마이크로서비스 - 트랜잭션"
+date:   2018-9-27
+description: 마이크로서비스에서는 트랜잭션을 처리해봅시다.
+---
+<p class="intro"><span class="dropcap">T</span>rasaction은 다수 연산의 전체 성공 또는 전체 실패를 보장하는 방법입니다. 마이크로서비스에서의 트랜잭션 처리에 대해 알아봅시다.</p>
+{% highlight sql %}
+START TRANSACTION
+INSERT
+INSERT
+COMMIT
+{% endhighlight %}
+
+# 트랜잭션이 정말 필요한가
