@@ -13,3 +13,7 @@ COMMIT
 {% endhighlight %}
 
 # 트랜잭션이 정말 필요한가
+우리는 단일DB에서 @Transaction 또는 3~4줄 정도의 추가 코드를 통해 쉽게 트랜잭션을 처리했습니다. 이 쉬움은 과도하게 많은 트랜잭션남발을 불러왔습니다.
+
+# 참고자료
+<https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/>
