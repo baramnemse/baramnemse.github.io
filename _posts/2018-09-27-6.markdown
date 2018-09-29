@@ -32,7 +32,6 @@ Saga Pattern은 다음 두 가지 방식이 있습니다.
 1. Post /Orders
 2. Store Order DB
 3. Fire Order_Created
-
 1. Listen Order_Created
 2. Store Payment DB
 3. Fire Payment_Created(BILLED_ORDER_EVENT)
