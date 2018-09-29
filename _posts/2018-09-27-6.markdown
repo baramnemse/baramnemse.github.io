@@ -27,7 +27,17 @@ Saga Pattern은 다음 두 가지 방식이 있습니다.
 
 ![Nginx]({{ "/assets/post/6/1.png" | absolute_url }})
 
+1. Post /Orders
+2. Store Order DB
+3. Fire Order_Created
+
+1. Listen Order_Created
+2. Store Payment DB
+3. Fire Payment_Created(BILLED_ORDER_EVENT)
+
 이벤트 방식에서는 이와 같이 각각의 서비스에서 이벤트를 발생하고 이 이벤트를 다른 서비스에서 처리하고 다시 이벤트를 발생합니다. 따라서 트랜잭션을 처리하는 마스터와 같은 존재가 필요 없습니다. 이벤트 방식은 Persistence를 처리하고 이벤트를 만드는 방식과 이벤트를 만들고 Persistence 처리하는 방식이 있으나 대부분의 이벤트 드리븐 방식이 비동기이므로 둘의 차이는 없습니다.
+
+@ Event - Rollback
 
 ![Nginx]({{ "/assets/post/6/2.png" | absolute_url }})
 
