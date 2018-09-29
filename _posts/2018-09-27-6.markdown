@@ -2,18 +2,22 @@
 layout: post
 title:  "마이크로서비스 - 트랜잭션"
 date:   2018-9-27
-description: 마이크로서비스에서는 트랜잭션을 처리해봅시다.
+description: Transaction은 다수 연산의 전체 성공 또는 전체 실패를 보장하는 방법입니다. 마이크로서비스에서의 트랜잭션 처리에 대해 알아봅시다.
 ---
 <p class="intro"><span class="dropcap">T</span>ransaction은 다수 연산의 전체 성공 또는 전체 실패를 보장하는 방법입니다. 마이크로서비스에서의 트랜잭션 처리에 대해 알아봅시다.</p>
-{% highlight sql %}
-START TRANSACTION
-INSERT
-INSERT
-COMMIT
-{% endhighlight %}
 
 # 트랜잭션이 정말 필요한가
-우리는 단일DB에서 @Transaction 또는 3~4줄 정도의 추가 코드를 통해 쉽게 트랜잭션을 처리했습니다. 이 쉬움은 과도하게 많은 트랜잭션남발을 불러왔습니다.
+마이크로서비스와 같은 분산환경에서 트랜잭션은 굉장히 비싼 연산(시간, 네트워크...)입니다. 업데이트를 막는 Lock을 걸고 여러 데이터들과 Sync를 맞춰야하기 때문입니다. 하지만 단일DB에서 @Transaction 또는 3~4줄 정도의 추가 코드를 통해 쉽게 트랜잭션을 처리했습니다. 이 쉬움은 과도하게 많은 트랜잭션남발을 불러왔습니다. 따라서 우리는 정말 트랜잭션이 필요한지 아니면 롤백만 필요한지 서비스 시나리오를 한번 생각해야합니다.
+
+# Saga Pattern
+여기서 소개하는 패턴은 우리가 단일DB에서 쓰던 트랜잭션이 아닙니다.
+{% highlight sql %}
+START TRANSACTION
+INSERT INTO TABLE A
+INSERT INTO TABLE B
+COMMIT
+{% endhighlight %}
+이와 같이 테이블 A와 테이블 B에 인서트할 경우 짧은 시간동안 테이블 A에는 인서트가됐으나 테이블 B에는 인서트가 안된 상황이 발생합니다. 물론 A 인서트가 성공하고 B가 실패하면 A는 롤백되는 원자성을 보장합니다. 하지만 짧은 시간동안 A에는 인서트된 데이터가 존재합니다. 따라서 반드시 이전 파트 부분을 이해하고 나의 서비스 시나리오가 정말 단일 DB에서 쓰던 트랜잭션이 필요한지 판단해야합니다.
 
 # 참고자료
 <https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/>
