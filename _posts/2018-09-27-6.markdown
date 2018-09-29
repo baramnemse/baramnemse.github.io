@@ -23,3 +23,5 @@ COMMIT
 <https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/>
 
 <https://www.youtube.com/watch?v=E8-e-3fRHBw>
+
+Data consistency in microservices architecture in ebay <https://ebaytech.berlin/data-consistency-in-microservices-architecture-bf99ba31636f>
