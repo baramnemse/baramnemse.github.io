@@ -38,9 +38,18 @@ Saga Pattern은 다음 두 가지 방식이 있습니다.
 
 다이아그램 처럼 이벤트에 의미(BILLED_ORDER_EVENT)를 부여하는것 보다는 CRUD+Event로 네이밍(Payment_Created)하는것이 좋습니다. 비지니스가 복잡할수록 이벤트 네이밍이 어렵기 때문입니다. 이벤트 방식에서는 이와 같이 각각의 서비스에서 이벤트를 발생하고 이 이벤트를 다른 서비스에서 처리하고 다시 이벤트를 발생합니다. 따라서 트랜잭션을 처리하는 마스터와 같은 존재가 필요 없습니다. 이벤트 방식은 Persistence를 처리하고 이벤트를 만드는 방식과 이벤트를 만들고 Persistence 처리하는 방식이 있으나 대부분의 이벤트 드리븐 방식이 비동기이므로 둘의 차이는 없습니다.
 
-@ Event - Rollback
+# Event - Rollback
+
+이벤트 방식에서 롤백은 이벤트가 역으로 전파된다고 생각하면 이해하기 쉽습니다.
 
 ![Nginx]({{ "/assets/post/6/2.png" | absolute_url }})
+
+위 다이아그램에서는 Stock 서비스에서 재고가 없을 경우 Order와 Parment에 이벤트를 보내지만 실제 시스템 설계에서는 다음과 같이 하는것이 좋습니다. 이벤트가 한향으로 흐르지 않고 여러방향으로 전파되면 시스템이 불필요하게 복잡해집니다. 이벤트가 계속 루프로 도는 치명적인 버그를 만들수도 있기 때문에 아래와 같은 처리가 좋습니다.
+
+1. 페이먼트 롤백 이벤트 발생
+2. 페이먼트에서 롤백 처리
+3. 주문 롤백 이벤트 발생
+4. 주문에서 롤백 처리
 
 # 참고자료
 이미지 출처 <https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/>
