@@ -19,8 +19,18 @@ COMMIT
 {% endhighlight %}
 이와 같이 테이블 A와 테이블 B에 인서트할 경우 짧은 시간동안 테이블 A에는 인서트가됐으나 테이블 B에는 인서트가 안된 상황이 발생합니다. 물론 A 인서트가 성공하고 B가 실패하면 A는 롤백되는 원자성을 보장합니다. 하지만 짧은 시간동안 A에는 인서트된 데이터가 존재합니다. 따라서 반드시 이전 파트 부분을 이해하고 나의 서비스 시나리오가 정말 단일 DB에서 쓰던 트랜잭션이 필요한지 판단해야합니다.
 
+Saga Pattern은 다음 두 가지 방식이 있습니다.
+1. Events/Choreography
+2. Command/Orchestration
+
+마이크로서비스에서는 1번 방식이 선호됩니다. 이벤트 방식은 트랜잭션을 주도하는 서비스 없이 각자 서비스들이 이벤트에 따라서 자신의 역할만 수행하는 방식이고 컴맨드 방식을 트랜잭션을 주도하는 마스터같은 서비스가 존재합니다. 이벤트 방식은 락을 걸기 어렵지만 컴맨드 방식은 트랜잭션을 주관하는 마스터에 의해 락을 관리할 수 있는 장점이 있습니다.
+
+![Nginx]({{ "/assets/post/6/1.png" | absolute_url }})
+
+![Nginx]({{ "/assets/post/6/2.png" | absolute_url }})
+
 # 참고자료
-<https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/>
+이미지 출처 <https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/>
 
 <https://www.youtube.com/watch?v=E8-e-3fRHBw>
 
