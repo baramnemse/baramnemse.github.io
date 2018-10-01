@@ -76,11 +76,12 @@ Saga Pattern은 다음 두 가지 방식이 있습니다.
 2. Event Fail
 3. Event Fire&Complete
 
-| TransactionId | Timestamp | Event |
+| TransactionId | Timestamp | Event | Reasons
 |-------|--------|---------|
 | 1 | 1538362942842 | CreateOrder |
 | 2 | 1538362943631 | CreatePayment |
-| 3 | 1538362944879 | FailCreatePayment |
+| 3 | 1538362944879 | FailCreatePayment | Out of Credit
+| 4 | 1538362945143 | RollbackCreateOrder |
 
 # 참고자료
 이미지 출처 <https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/>
